@@ -1,8 +1,8 @@
-// Lab_03_4.cpp
-// < Øêðèíäà Âîëîäèìèð
-// Ëàáîðàòîðíà ðîáîòà ¹ 4.2
-// Òàáóëÿö³ÿ ôóíêö³¿, çàäàíî¿
-// Âàð³àíò 22
+
+// < Ð¨ÐºÑ€Ð¸Ð½Ð´Ð° Ð’Ð¾Ð»Ð¾Ð´Ð¸Ð¼Ð¸Ñ€
+// Ð›Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½Ð° Ñ€Ð¾Ð±Ð¾Ñ‚Ð° â„– 4.2
+// Ð¢Ð°Ð±ÑƒÐ»ÑÑ†Ñ–Ñ Ñ„ÑƒÐ½ÐºÑ†Ñ–Ñ—, Ð·Ð°Ð´Ð°Ð½Ð¾Ñ—
+// Ð’Ð°Ñ€Ñ–Ð°Ð½Ñ‚ 22
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -38,39 +38,6 @@ int main()
 	}
 	cout << "---------------------------" << endl;
 	x = xp;
-	do {
-		A = fabs(x * x * x);
-		if (x < -1)
-			B = fabs(2 + x) + sqrt(sin(x));
-		else
-			if (-1 <= x && x <= 1)
-				B = atan((x * x * x) + 1) + 1;
-			else
-				B = exp(cos(x)) + log10(1 / x + 1);
-
-		y = A + B;
-		cout << "|" << setw(7) << setprecision(2) << x
-			<< " |" << setw(10) << setprecision(3) << y
-			<< " |" << endl;
-		x += dx;
-	} while (x <= xk);
-	cout << "---------------------------" << endl;
-	for (x = xp; x <= xk; x += dx)
-	{
-		A = fabs(x * x * x);
-		if (x < -1)
-			B = fabs(2 + x) + sqrt(sin(x));
-		else
-			if (-1 <= x && x <= 1)
-				B = atan((x * x * x) + 1) + 1;
-			else
-				B = exp(cos(x)) + log10(1 / x + 1);
-
-		y = A + B;
-		cout << "|" << setw(7) << setprecision(2) << x
-			<< " |" << setw(10) << setprecision(3) << y
-			<< " |" << endl;
-	}
 	return 0;
 	cin.get();
 }
